@@ -35,7 +35,38 @@
   Calculate the average marks using the formula:
    
   average=(math + science + english​)/3.0f
-### Step 8: 
+### Step 8:# Ex.No:6
+  Build a C program to input a student’s marks in three subjects (Math, Science, and English). Calculate the average marks and determine the grade using nested if-else statements with safe floating-point comparisons based on the following grading criteria:
+    
+  A: 90 and above
+  
+  B: 75 to 89.99
+  
+  C: 50 to 74.99
+  
+  F: below 50
+  
+  The program should display the average marks up to two decimal places and the corresponding grade. 
+  
+# Date : 
+# Aim:
+ To build a C program that receives inputs for a student’s marks in three subjects, calculates the average, and determines the grade using nested if-else statements with safe floating-point comparisons.
+# Algorithm:
+### Step 1:
+  Start
+### Step 2: 
+  Include the standard input-output library: #include<stdio.h>.
+### Step 3: 
+  Declare float variables math, science, english to store marks of each subject.
+### Step 4: 
+  Declare a float variable average to store the average marks.
+### Step 5: 
+  Prompt the user to enter marks for Math, Science, and English.
+### Step 6: 
+  Read the input marks.
+### Step 7: 
+  Calculate the average marks using the formula:
+    
   Check if average is greater than or equal to 90.0f
 
   If yes, print Grade A.
@@ -56,7 +87,45 @@
 ### Step 11:
   Stop
 # Program:
+
+~~~
+#include <stdio.h>
+
+int main()
+{
+    float math, science, english, average;
+
+    printf("Enter marks for Math, Science, and English:\n");
+    scanf("%f %f %f", &math, &science, &english);
+
+    average = (math + science + english) / 3.0f;
+
+    printf("Average Marks = %.2f\n", average);
+
+    if (average >= 90.0f)
+    {
+        printf("Grade: A");
+    }
+    else if (average >= 75.0f)
+    {
+        printf("Grade: B");
+    }
+    else if (average >= 50.0f)
+    {
+        printf("Grade: C");
+    }
+    else
+    {
+        printf("Grade: F");
+    }
+
+    return 0;
+}
+
+~~~
 # Output:
+
+![alt text](image.png)
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +157,27 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int number = 15;
+    int i;
+
+    printf("Multiplication Table of %d\n", number);
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+
+~~~
 # Output:
+![alt text](image-1.png)
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +220,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int n, i = 2, f = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while (i <= n - 1)
+    {
+        if (n % i == 0)
+        {
+            f = 1;
+            break;
+        }
+        i++;
+    }
+
+    if (f == 0)
+        printf("%d is a Prime number", n);
+    else
+        printf("%d is not a Prime number", n);
+
+    return 0;
+}
+
+~~~
 # Output:
+![alt text](image-2.png)
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +298,48 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        for (j = 1; j <= n; j++)
+        {
+            if (i == 1)
+            {
+                printf("%d", j);
+            }
+            else if (i == n)
+            {
+                printf("%d", n - j + 1);
+            }
+            else
+            {
+                if (j == 1)
+                    printf("%d", i);
+                else if (j == n)
+                    printf("%d", n - i + 1);
+                else
+                    printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+~~~
 # Output:
+
+![alt text](image-3.png)
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +392,43 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+
+### Program:
+~~~
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    /* First line */
+    printf("0\n");
+
+    for (i = 7; i >= 1; i--)
+    {
+        for (j = i; j <= 7; j++)
+        {
+            printf("%d ", j);
+        }
+
+        printf("0 ");
+
+        for (j = 7; j >= i; j--)
+        {
+            printf("%d ", j);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+~~~
+
+### Output:
+
+![alt text](image-4.png)
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
